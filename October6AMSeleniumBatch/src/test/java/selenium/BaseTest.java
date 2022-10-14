@@ -13,11 +13,27 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseTest 
 {
 	public static WebDriver driver;
+	public static String projectPath = System.getProperty("user.dir")+"//src//test//resources//";
+	public static FileInputStream fis;
 	public static Properties p;
+	public static Properties mainProp;
+	public static Properties childProp;
 	
 	public static void init() throws Exception
 	{
-		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"//src//test//resources//data.properties");
+		
+		fis = new FileInputStream(projectPath+"environment.properties");
+		mainProp = new Properties();
+		mainProp.load(fis);
+		String e = mainProp.getProperty("env");
+		System.out.println(e);
+		
+		fis = new FileInputStream(projectPath+e+".properties");
+		childProp = new Properties();
+		childProp.load(fis);
+		System.out.println(childProp.getProperty("amazonurl"));
+		
+		FileInputStream fis = new FileInputStream(projectPath+"data.properties");
 		p = new Properties();
 		p.load(fis);
 		//String val = p.getProperty("chromebrowser");
@@ -40,7 +56,8 @@ public class BaseTest
 	
 	public static void navigateUrl(String url)
 	{
-		driver.get(p.getProperty(url));
+		//driver.get(childProp.getProperty(url));
+		driver.navigate().to(childProp.getProperty(url));
 	}
 
 }
