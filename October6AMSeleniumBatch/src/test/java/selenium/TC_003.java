@@ -23,11 +23,11 @@ public class TC_003 extends BaseTest
 		
 		//driver.findElement(By.xpath("//*[@id=\"nav-search-submit-button\"]")).click();
 		
-		selectOption("searchDropdownBox","Books");
+		selectOption("amazonsearchdropbox_id","Books");
 		
-		typeText("twotabsearchtextbox","Harry Potter");
+		typeText("amazonsearchtextbox_id","Harry Potter");
 		
-		clickElement("//*[@id=\"nav-search-submit-button\"]");
+		clickElement("amazonsearchbutton_xpath");
 
 	}
 }
