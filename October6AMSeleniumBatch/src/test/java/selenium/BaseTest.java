@@ -2,6 +2,7 @@ package selenium;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.time.Duration;
 import java.util.Date;
 import java.util.Properties;
 
@@ -142,7 +143,7 @@ public class BaseTest
 	{
 		System.out.println("Checking for Element Presence :" + locatorKey);
 		
-		WebDriverWait wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		
 		try 
 		{
