@@ -1,15 +1,25 @@
 package selenium;
 
+import java.io.File;
 import java.io.FileInputStream;
+import java.util.Date;
 import java.util.Properties;
 
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -22,6 +32,8 @@ public class BaseTest
 	public static Properties mainProp;
 	public static Properties childProp;
 	public static Properties orProp;
+	public static ExtentReports rep;
+	public static ExtentTest test;
 	
 	public static void init() throws Exception
 	{
@@ -46,6 +58,11 @@ public class BaseTest
 		fis = new FileInputStream(projectPath+"or.properties");
 		orProp = new Properties();
 		orProp.load(fis);
+		
+		fis = new FileInputStream(projectPath+"log4jconfig.properties");
+		PropertyConfigurator.configure(fis);
+		
+		rep = ExtentManager.getInstance();
 	}
 	
 	public static void launch(String browser)
@@ -178,5 +195,39 @@ public class BaseTest
 		
 		return by;
 		
+	}
+	
+	//Verifications
+	public static boolean isLinksEqual(String expectedLink) 
+	{
+		String actualLink = driver.findElement(By.linkText("Customer Service")).getText();
+		if(actualLink.equals(expectedLink))
+			return true;
+		else
+			return false;
+	}
+	
+	
+	// Reportings
+	public static void reportPass(String passMessage) 
+	{
+		test.log(Status.PASS, passMessage);
+	}
+
+	public static void reportFailure(String failMessage) throws Exception
+	{
+		test.log(Status.FAIL, failMessage);
+		takesScreenshot();
+	}
+
+	public static void takesScreenshot() throws Exception
+	{
+		Date dt=new Date();
+		System.out.println(dt);
+		String dateFormat=dt.toString().replace(":", "_").replace(" ", "_")+".png";		
+		File scrFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileHandler.copy(scrFile, new File(System.getProperty("user.dir")+"//failurescreenshots//"+dateFormat));
+		
+		test.log(Status.INFO,"Screenshot --->" +test.addScreenCaptureFromPath(System.getProperty("user.dir")+"//failurescreenshots//"+dateFormat));
 	}
 }
