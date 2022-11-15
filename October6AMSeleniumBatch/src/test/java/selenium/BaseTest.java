@@ -2,7 +2,6 @@ package selenium;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.time.Duration;
 import java.util.Date;
 import java.util.Properties;
 
@@ -68,12 +67,12 @@ public class BaseTest
 	
 	public static void launch(String browser)
 	{
-		if(p.getProperty(browser).equals("chrome"))
+		if(browser.equals("chrome"))
 		{
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		}
-		else if(p.getProperty(browser).equals("firefox"))
+		else if(browser.equals("firefox"))
 		{
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
@@ -143,7 +142,8 @@ public class BaseTest
 	{
 		System.out.println("Checking for Element Presence :" + locatorKey);
 		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		WebDriverWait wait = new WebDriverWait(driver, 60);
 		
 		try 
 		{

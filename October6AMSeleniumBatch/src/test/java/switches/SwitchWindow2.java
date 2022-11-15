@@ -1,8 +1,8 @@
 package switches;
 
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -21,12 +21,14 @@ public class SwitchWindow2
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.icicibank.com");
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+		//driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		System.out.println(driver.getTitle());
 		String parentWindow = driver.getWindowHandle();
 		System.out.println(parentWindow);
 		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		WebDriverWait wait = new WebDriverWait(driver, 30);
 		while(!wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//div[@class='d-img image-media']/a/img[@alt='FD'])[2]"))).isDisplayed())
 		{
 			driver.findElement(By.xpath("(//button[@class='slick-next slick-arrow'])[1]")).click();
