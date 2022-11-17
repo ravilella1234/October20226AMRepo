@@ -14,9 +14,8 @@ import selenium.BaseTest;
 
 public class LinksTesting1 extends BaseTest
 {
-	
-	@BeforeMethod
 	@Parameters("browser")
+	@BeforeMethod(groups = {"regression"})
 	public void setup(String btype) throws Exception
 	{
 		System.out.println("startProcess");
@@ -32,7 +31,7 @@ public class LinksTesting1 extends BaseTest
 	}
 	
 	
-	@Test
+	@Test(groups = {"regression"})
 	public void linktesting1()
 	
 	 {
@@ -46,7 +45,7 @@ public class LinksTesting1 extends BaseTest
 		
 	 }
 	
-	@AfterMethod
+	@AfterMethod(groups = {"regression"})
 	public void tearDown()
 	{
 		 System.out.println("endProcess");

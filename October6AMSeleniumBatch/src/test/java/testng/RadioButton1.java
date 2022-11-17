@@ -15,9 +15,8 @@ import selenium.BaseTest;
 
 public class RadioButton1 extends BaseTest
 {
-
-	@BeforeMethod
 	@Parameters("browser")
+	@BeforeMethod(groups = {"regression","smoke"})
 	public void beforeMethod(String btype) throws Exception 
 	{
 		System.out.println("startProcess");
@@ -33,7 +32,7 @@ public class RadioButton1 extends BaseTest
 	 }
 	
 	
-	@Test
+	@Test(groups = {"regression","smoke"})
 	public void radioButtonTest()
 	{
 		WebElement radio=driver.findElement(By.xpath("(//td[@class='table5'])[2]"));
@@ -45,7 +44,7 @@ public class RadioButton1 extends BaseTest
 	}
  
 
-  @AfterMethod
+  @AfterMethod(groups = {"regression","smoke"})
   public void afterMethod() 
   {
 	  System.out.println("endProcess");

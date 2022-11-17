@@ -1,41 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
+<testng-results skipped="1" failed="1" ignored="0" total="4" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="180" started-at="2022-11-16T01:18:47Z" finished-at="2022-11-16T01:18:47Z">
+  <suite name="Default suite" duration-ms="195" started-at="2022-11-17T01:24:26Z" finished-at="2022-11-17T01:24:26Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="180" started-at="2022-11-16T01:18:47Z" finished-at="2022-11-16T01:18:47Z">
-      <class name="testng.TestsParallel">
-        <test-method status="PASS" signature="test7()[pri:0, instance:testng.TestsParallel@3e6fa38a]" name="test7" duration-ms="41" started-at="2022-11-16T01:18:47Z" finished-at="2022-11-16T01:18:47Z">
+    <test name="Default test" duration-ms="195" started-at="2022-11-17T01:24:26Z" finished-at="2022-11-17T01:24:26Z">
+      <class name="testng.TestDependencies">
+        <test-method status="PASS" signature="orange()[pri:1, instance:testng.TestDependencies@3e6fa38a]" name="orange" duration-ms="31" started-at="2022-11-17T01:24:26Z" finished-at="2022-11-17T01:24:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test7 -->
-        <test-method status="PASS" signature="test6()[pri:0, instance:testng.TestsParallel@3e6fa38a]" name="test6" duration-ms="37" started-at="2022-11-16T01:18:47Z" finished-at="2022-11-16T01:18:47Z">
+        </test-method> <!-- orange -->
+        <test-method status="PASS" signature="white()[pri:2, instance:testng.TestDependencies@3e6fa38a]" name="white" duration-ms="4" started-at="2022-11-17T01:24:26Z" depends-on-methods="testng.TestDependencies.orange" finished-at="2022-11-17T01:24:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test6 -->
-        <test-method status="PASS" signature="test1()[pri:0, instance:testng.TestsParallel@3e6fa38a]" name="test1" duration-ms="42" started-at="2022-11-16T01:18:47Z" finished-at="2022-11-16T01:18:47Z">
+        </test-method> <!-- white -->
+        <test-method status="FAIL" signature="blue()[pri:3, instance:testng.TestDependencies@3e6fa38a]" name="blue" duration-ms="10" started-at="2022-11-17T01:24:26Z" depends-on-methods="testng.TestDependencies.white" finished-at="2022-11-17T01:24:26Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Blue test is Failed...]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Blue test is Failed...
+at org.testng.Assert.fail(Assert.java:96)
+at testng.TestDependencies.blue(TestDependencies.java:27)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method status="PASS" signature="test2()[pri:0, instance:testng.TestsParallel@3e6fa38a]" name="test2" duration-ms="39" started-at="2022-11-16T01:18:47Z" finished-at="2022-11-16T01:18:47Z">
+        </test-method> <!-- blue -->
+        <test-method status="SKIP" signature="green()[pri:4, instance:testng.TestDependencies@3e6fa38a]" name="green" duration-ms="0" started-at="2022-11-17T01:24:26Z" depends-on-methods="testng.TestDependencies.blue" finished-at="2022-11-17T01:24:26Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestDependencies.green()[pri:4, instance:testng.TestDependencies@3e6fa38a] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestDependencies.green()[pri:4, instance:testng.TestDependencies@3e6fa38a] depends on not successfully finished methods
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test2 -->
-        <test-method status="PASS" signature="test5()[pri:0, instance:testng.TestsParallel@3e6fa38a]" name="test5" duration-ms="40" started-at="2022-11-16T01:18:47Z" finished-at="2022-11-16T01:18:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test5 -->
-        <test-method status="PASS" signature="test4()[pri:0, instance:testng.TestsParallel@3e6fa38a]" name="test4" duration-ms="39" started-at="2022-11-16T01:18:47Z" finished-at="2022-11-16T01:18:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test4 -->
-        <test-method status="PASS" signature="test3()[pri:0, instance:testng.TestsParallel@3e6fa38a]" name="test3" duration-ms="43" started-at="2022-11-16T01:18:47Z" finished-at="2022-11-16T01:18:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test3 -->
-      </class> <!-- testng.TestsParallel -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- green -->
+      </class> <!-- testng.TestDependencies -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
