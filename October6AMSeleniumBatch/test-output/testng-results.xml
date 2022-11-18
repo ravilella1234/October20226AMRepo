@@ -1,29 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="1" ignored="0" total="4" passed="2">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
+    <line>
+      <![CDATA[Test Started Running :amazon]]>
+    </line>
+    <line>
+      <![CDATA[<a href='D:\April2022WD\October6AMSeleniumBatch//failure//Fri_Nov_18_06_55_36_IST_2022.png'> <img src='D:\April2022WD\October6AMSeleniumBatch//failure//Fri_Nov_18_06_55_36_IST_2022.png' height='100' width='100'/> </a>]]>
+    </line>
+    <line>
+      <![CDATA[Test has Failed:amazon]]>
+    </line>
+    <line>
+      <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#twotabsearchtextbo"}
+  (Session info: chrome=107.0.5304.107)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-JCJ8HOK', ip: '192.168.0.187', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\ravi\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56929}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 39b441c772616416859c6a6dea9709ef
+*** Element info: {Using=id, value=twotabsearchtextbo}]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="195" started-at="2022-11-17T01:24:26Z" finished-at="2022-11-17T01:24:26Z">
+  <suite name="Suite" duration-ms="85135" started-at="2022-11-18T01:25:36Z" finished-at="2022-11-18T01:27:01Z">
     <groups>
+      <group name="regression">
+        <method signature="TNG_002.amazon()[pri:0, instance:testng.TNG_002@146ba0ac]" name="amazon" class="testng.TNG_002"/>
+      </group> <!-- regression -->
+      <group name="sanity">
+        <method signature="TNG_002.amazon()[pri:0, instance:testng.TNG_002@146ba0ac]" name="amazon" class="testng.TNG_002"/>
+      </group> <!-- sanity -->
     </groups>
-    <test name="Default test" duration-ms="195" started-at="2022-11-17T01:24:26Z" finished-at="2022-11-17T01:24:26Z">
-      <class name="testng.TestDependencies">
-        <test-method status="PASS" signature="orange()[pri:1, instance:testng.TestDependencies@3e6fa38a]" name="orange" duration-ms="31" started-at="2022-11-17T01:24:26Z" finished-at="2022-11-17T01:24:26Z">
+    <test name="Test" duration-ms="85135" started-at="2022-11-18T01:25:36Z" finished-at="2022-11-18T01:27:01Z">
+      <class name="testng.TNG_002">
+        <test-method status="PASS" signature="startProcess(java.lang.String)[pri:0, instance:testng.TNG_002@146ba0ac]" name="startProcess" is-config="true" duration-ms="18494" started-at="2022-11-18T01:25:36Z" finished-at="2022-11-18T01:25:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- orange -->
-        <test-method status="PASS" signature="white()[pri:2, instance:testng.TestDependencies@3e6fa38a]" name="white" duration-ms="4" started-at="2022-11-17T01:24:26Z" depends-on-methods="testng.TestDependencies.orange" finished-at="2022-11-17T01:24:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- white -->
-        <test-method status="FAIL" signature="blue()[pri:3, instance:testng.TestDependencies@3e6fa38a]" name="blue" duration-ms="10" started-at="2022-11-17T01:24:26Z" depends-on-methods="testng.TestDependencies.white" finished-at="2022-11-17T01:24:26Z">
-          <exception class="java.lang.AssertionError">
+        </test-method> <!-- startProcess -->
+        <test-method status="FAIL" signature="amazon()[pri:0, instance:testng.TNG_002@146ba0ac]" name="amazon" duration-ms="63830" started-at="2022-11-18T01:25:55Z" finished-at="2022-11-18T01:26:59Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Blue test is Failed...]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#twotabsearchtextbo"}
+  (Session info: chrome=107.0.5304.107)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-JCJ8HOK', ip: '192.168.0.187', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\ravi\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56929}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 39b441c772616416859c6a6dea9709ef
+*** Element info: {Using=id, value=twotabsearchtextbo}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Blue test is Failed...
-at org.testng.Assert.fail(Assert.java:96)
-at testng.TestDependencies.blue(TestDependencies.java:27)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#twotabsearchtextbo"}
+  (Session info: chrome=107.0.5304.107)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-JCJ8HOK', ip: '192.168.0.187', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\ravi\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56929}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 39b441c772616416859c6a6dea9709ef
+*** Element info: {Using=id, value=twotabsearchtextbo}
+at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+at org.openqa.selenium.By$ById.findElement(By.java:188)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at selenium.BaseTest.getElement(BaseTest.java:127)
+at selenium.BaseTest.typeText(BaseTest.java:105)
+at testng.TNG_002.amazon(TNG_002.java:38)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -51,42 +110,35 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+            <line>
+              <![CDATA[Test Started Running :amazon]]>
+            </line>
+            <line>
+              <![CDATA[<a href='D:\April2022WD\October6AMSeleniumBatch//failure//Fri_Nov_18_06_55_36_IST_2022.png'> <img src='D:\April2022WD\October6AMSeleniumBatch//failure//Fri_Nov_18_06_55_36_IST_2022.png' height='100' width='100'/> </a>]]>
+            </line>
+            <line>
+              <![CDATA[Test has Failed:amazon]]>
+            </line>
+            <line>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#twotabsearchtextbo"}
+  (Session info: chrome=107.0.5304.107)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-JCJ8HOK', ip: '192.168.0.187', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\ravi\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56929}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 39b441c772616416859c6a6dea9709ef
+*** Element info: {Using=id, value=twotabsearchtextbo}]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- amazon -->
+        <test-method status="PASS" signature="endProcess()[pri:0, instance:testng.TNG_002@146ba0ac]" name="endProcess" is-config="true" duration-ms="2086" started-at="2022-11-18T01:26:59Z" finished-at="2022-11-18T01:27:01Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- blue -->
-        <test-method status="SKIP" signature="green()[pri:4, instance:testng.TestDependencies@3e6fa38a]" name="green" duration-ms="0" started-at="2022-11-17T01:24:26Z" depends-on-methods="testng.TestDependencies.blue" finished-at="2022-11-17T01:24:26Z">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method TestDependencies.green()[pri:4, instance:testng.TestDependencies@3e6fa38a] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method TestDependencies.green()[pri:4, instance:testng.TestDependencies@3e6fa38a] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- green -->
-      </class> <!-- testng.TestDependencies -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- endProcess -->
+      </class> <!-- testng.TNG_002 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
